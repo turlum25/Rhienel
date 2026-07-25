@@ -1,6 +1,6 @@
 /*
  * boot stuff
- * don't be a dumb fuck and touch the 64-byte offsets
+ * don't be a dumb guy and touch the 64-byte offsets
  * or you will be executed
  * 2026 - 22 - 07
  */
@@ -49,6 +49,7 @@ primary_entry:
 // this thing that Google Gemini told me to put to prevent
 // rawK from crashing
 // i guess it'll fix it :shrug:
+// Re: It works to this day, thank you mr coolio gemini
 .balign 16
 .section .bss
 .space 16384
