@@ -155,7 +155,7 @@ int MainCoolThingy(void) {
     // This whole thing is just built around 
     // Inputting, printing, booting, profitting
     // Yes.
-    // don't be a dumb fuck and not understand this
+    // don't be a dumb guy and not understand this
 
     DetectCPU();
     prints("\033[2J\033[H");
