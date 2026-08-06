@@ -95,6 +95,11 @@ void inputs(const char *prompt_text) {
 
             if (key == '\r' || key == '\n') {
                 break;
+            } if (key == '\b' || key == 127) {
+                if (index > 0) {
+                    index--;
+                    prints("\b \b");
+                }
             }
             buffer[index] = key;
             index++;
@@ -102,7 +107,20 @@ void inputs(const char *prompt_text) {
     }
     
     buffer[index] = '\0';
-    CACHE_INDEX++;
+    CACHE_INDEX = (CACHE_INDEX + 1) % 10;
+}
+
+// These things
+void *kmemset(void *s, int c, size_t n) {
+    unsigned char *p = s;
+    while (n--) {
+        *p++ = (unsigned char)c;
+    }
+    return s;
+}
+
+void *memset(void *s, int c, size_t n) {
+    return kmemset(s, c, n);
 }
 
 // basically like cmp x0, x1, outputintegername
@@ -159,7 +177,7 @@ int MainCoolThingy(void) {
 
     DetectCPU();
     prints("\033[2J\033[H");
-    prints("Welcome to RSK v0.1!\n");
+    prints("Welcome to Rhienel!\n");
     prints("======================\n\n");
     prints("[sys] init\n");
     prints("[sys] CPU found: %s\n", CPUType);
@@ -201,4 +219,5 @@ void _defeatTheKernel(void) {
     MainCoolThingy();
     for (;;) {
     }
+}
 }
