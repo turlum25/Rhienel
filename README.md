@@ -1,9 +1,11 @@
-<h1 align="center">RSK</h1>
+<h1 align="center">Rhienel</h1>
 <p align="center">
   <img width="649" height="404" alt="image" src="https://github.com/user-attachments/assets/ff8c1591-0f8c-42a6-9f45-f4f86834db26" />
 
 <p align="center">
   A really simple C and Assembly based kernel.
+
+  Note: This screenshot is really old.
 </p>
 
 # Requirements
@@ -18,7 +20,7 @@
 # What can RSK do?
 It's a kernel. It's a foundation of an operating system.
 
-Currently as of release v0.1, it doesnt really have display drivers so you will have to run compile.py or run.py. For now, it's a microkernel. Some files and code snippets are built out of the Linux kernel v5.15.1.
+Currently as of release v0.1.1, it doesnt really have display drivers so you will have to run compile.py or run.py. For now, it's a microkernel. Some files and code snippets are built out of the Linux kernel v5.15.1.
 
 # Compiling and running RSK
 
